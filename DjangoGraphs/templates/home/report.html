@@ -1,0 +1,19 @@
+{% extends 'home/index.html' %}
+{% load static %}
+{% block content %}
+
+        <style>.h2, h2 {
+         font-size: 2rem;
+         text-align: center;
+
+         .bottom-strip {
+         padding-top:200px;
+         }
+}        </style>
+        <h1 class="h2">RFSC Divisions on Maps </h1>
+        <div style="position: relative; display: block; left: 250px; top: 0px; width: 600px; height: 480px; margin: 0px;">
+          <br>
+          {% include 'home/tile.html' %}
+        </div>
+
+{% endblock content %}

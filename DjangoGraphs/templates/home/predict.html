@@ -1,0 +1,30 @@
+{% extends 'home/index.html' %}
+{% load static %}
+{% block content %}
+
+         <style>
+               .h2, h2 {
+               font-size: 2rem;
+               text-align: center;
+               }
+        </style>
+        <h1 class="h2"> RFSC Predictive Analysis  </h1>
+<br><br>
+<div style="width:1024px;">
+    <div style="width:512px; float:left;">
+        <h3 class="h2"> Current Trend of Registration </h3>
+        <div style="position: relative; display: block; left: 0px; top: 0px; width: 600px; height: 350px; margin: 0px;">
+          {% include 'home/temp2.html' %}
+        </div>
+    </div>
+    <div style="width:512px; float:right;padding-left:80px">
+        <h3 class="h2"> Registration for next years </h3>
+        <div style="position: relative; display: block; left: 0px; top: 0px; width: 600px; height: 350px; margin: 0px;">
+        {% include 'home/temp1.html' %}
+        </div>
+  </div>
+    <div style="clear: both;">
+        <div id="form-container"></div>
+    </div>
+</div>
+{% endblock content %}

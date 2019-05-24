@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.css" type="text/css" />
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="329dfd42-fb2b-4abe-821b-33e597355a7e" data-root-id="1104"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1193">
+          {"280f8baa-3f4d-411e-b8ae-4b0c0cfd0425":{"roots":{"references":[{"attributes":{"dimension":1,"ticker":{"id":"1120","type":"BasicTicker"}},"id":"1123","type":"Grid"},{"attributes":{"callback":null,"data":{"top":[447,4],"x":["Society","Apartment Owner Association(AOA)"]},"selected":{"id":"1136","type":"Selection"},"selection_policy":{"id":"1135","type":"UnionRenderers"}},"id":"1125","type":"ColumnDataSource"},{"attributes":{},"id":"1116","type":"CategoricalTicker"},{"attributes":{},"id":"1136","type":"Selection"},{"attributes":{"callback":null,"start":0},"id":"1109","type":"DataRange1d"},{"attributes":{"grid_line_color":{"value":null},"ticker":{"id":"1116","type":"CategoricalTicker"}},"id":"1118","type":"Grid"},{"attributes":{"text":"Types of society"},"id":"1105","type":"Title"},{"attributes":{"callback":null,"factors":["Society","Apartment Owner Association(AOA)"]},"id":"1107","type":"FactorRange"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto"},"id":"1124","type":"Toolbar"},{"attributes":{},"id":"1131","type":"CategoricalTickFormatter"},{"attributes":{},"id":"1111","type":"CategoricalScale"},{"attributes":{"data_source":{"id":"1125","type":"ColumnDataSource"},"glyph":{"id":"1126","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1127","type":"VBar"},"selection_glyph":null,"view":{"id":"1129","type":"CDSView"}},"id":"1128","type":"GlyphRenderer"},{"attributes":{},"id":"1135","type":"UnionRenderers"},{"attributes":{"formatter":{"id":"1131","type":"CategoricalTickFormatter"},"major_label_orientation":"horizontal","ticker":{"id":"1116","type":"CategoricalTicker"}},"id":"1115","type":"CategoricalAxis"},{"attributes":{"formatter":{"id":"1133","type":"BasicTickFormatter"},"ticker":{"id":"1120","type":"BasicTicker"}},"id":"1119","type":"LinearAxis"},{"attributes":{},"id":"1133","type":"BasicTickFormatter"},{"attributes":{},"id":"1120","type":"BasicTicker"},{"attributes":{"fill_color":{"value":"#1f77b4"},"line_color":{"value":"#1f77b4"},"top":{"field":"top"},"width":{"value":0.9},"x":{"field":"x"}},"id":"1126","type":"VBar"},{"attributes":{"below":[{"id":"1115","type":"CategoricalAxis"}],"center":[{"id":"1118","type":"Grid"},{"id":"1123","type":"Grid"}],"left":[{"id":"1119","type":"LinearAxis"}],"plot_height":400,"renderers":[{"id":"1128","type":"GlyphRenderer"}],"title":{"id":"1105","type":"Title"},"toolbar":{"id":"1124","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"1107","type":"FactorRange"},"x_scale":{"id":"1111","type":"CategoricalScale"},"y_range":{"id":"1109","type":"DataRange1d"},"y_scale":{"id":"1113","type":"LinearScale"}},"id":"1104","subtype":"Figure","type":"Plot"},{"attributes":{"source":{"id":"1125","type":"ColumnDataSource"}},"id":"1129","type":"CDSView"},{"attributes":{},"id":"1113","type":"LinearScale"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"top"},"width":{"value":0.9},"x":{"field":"x"}},"id":"1127","type":"VBar"}],"root_ids":["1104"]},"title":"Bokeh Application","version":"1.1.0"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1193').textContent;
+                  var render_items = [{"docid":"280f8baa-3f4d-411e-b8ae-4b0c0cfd0425","roots":{"1104":"329dfd42-fb2b-4abe-821b-33e597355a7e"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,243 @@
+{% extends 'home/index.html' %}
+{% load static %}
+{% block content %}
+
+        <style>
+        .h2, h2 {
+         font-size: 2rem;
+         text-align: center;
+         }
+         * {
+         box-sizing: border-box;
+         }
+
+        body {
+        font-family: Arial;
+        margin: 0 auto; /* Center website */
+        <!--max-width: 800px; /* Max width */-->
+        padding: 20px;
+        }
+
+        .heading {
+        font-size: 25px;
+        margin-right: 25px;
+        }
+
+       .fa {
+        font-size: 25px;
+        }
+
+        .checked {
+        color: orange;
+        }
+
+        /* Three column layout */
+        .side {
+        float: left;
+        width: 15%;
+        margin-top:10px;
+        }
+
+        .middle {
+         margin-top:10px;
+         float: left;
+         width: 70%;
+         }
+
+        /* Place text to the right */
+        .right {
+         text-align: right;
+         }
+
+         /* Clear floats after the columns */
+          .row:after {
+          content: "";
+          display: table;
+          clear: both;
+          }
+
+         /* The bar container */
+         .bar-container {
+          width: 100%;
+          background-color: #f1f1f1;
+          text-align: center;
+          color: white;
+          }
+
+          /* Individual bars */
+          .bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+          .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+          .bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+          .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+          .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+          /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+          @media (max-width: 400px) {
+          .side, .middle {
+          width: 100%;
+          }
+          .right {
+          display: none;
+          }
+          }
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        .checked {
+        color: orange;
+        onclick :checked;
+        }
+
+        <!--for the star rating-->
+
+.rating {
+  border: none;
+}
+.rating:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0, 0, 0, 0);
+}
+.rating:not(:checked) > label {
+  float: right;
+  width: 1em;
+  padding: 0 .1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 200%;
+  line-height: 1.2;
+  color: #ddd;
+}
+.rating:not(:checked) > label:before {
+  content: '★ ';
+}
+.rating > input:checked ~ label {
+  color: #f70;
+}
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #ea0;
+}
+.rating > label:active {
+  position: relative;
+}
+
+        </style>
+        <script>
+            $('.rating input').change(
+            function() {
+               $('#choice').text(this.value + ' stars');
+             }
+            )
+        </script>
+        <h1 class="h2"> Review Page  </h1>
+        <form class="form" style="padding-left:400px; width:800px;" action="{% url 'ReviewPageView' %}" method="POST">
+        {% csrf_token %}
+        <label class="mr-sm-2">User Name :</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" style="width:300px;" name="user_name">
+        <label class="mr-sm-2">Age</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" style="width:300px;" name="age">
+        <label class="mr-sm-2">What you feel about Website and the performance of RFSC</label><br>
+         <textarea rows = "5" cols = "50" name = "comments" style="width:75%; margin-top: 0px; margin-bottom: 0px; height: 69px;">
+         </textarea><br>
+        <label class="mr-sm-2" style="margin-top:20px;">Rate:</label>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <fieldset class="rating" style="width:50%;">
+           <input type="radio" id="star5" name="rating" value="5" />
+           <label for="star5">5 stars</label>
+           <input type="radio" id="star4" name="rating" value="4" />
+           <label for="star4">4 stars</label>
+           <input type="radio" id="star3" name="rating" value="3" />
+           <label for="star3">3 stars</label>
+           <input type="radio" id="star2" name="rating" value="2" />
+           <label for="star2">2 stars</label>
+           <input type="radio" id="star1" name="rating" value="1" />
+           <label for="star1">1 star</label>
+        </fieldset>
+
+<div id="choice"></div>
+            <br>
+        <center><button type="submit" class="btn btn-primary" >Submit</button></center>
+    </form>
+      <br>
+     {% if flag %}<p>Data Saved Successfully</p>
+     {% endif %}
+
+      <div style="padding-left:300px;width:70%;">
+      <span class="heading">User Rating</span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <p>4.0 average based on 254 reviews.</p>
+      <hr style="border:3px solid #f1f1f1">
+
+      <div class="row">
+      <div class="side">
+      <div>5 star</div>
+    </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+  </div>
+</div>
+
+{% endblock content %}

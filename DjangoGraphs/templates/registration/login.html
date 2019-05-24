@@ -1,0 +1,31 @@
+{% extends 'home/index.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+  <style>
+  body{
+      <!--background-image: url( "{% static 'home/img/abst.jpg' %}");-->
+      .frm {
+
+      }
+      h2{
+      padding-left:200px;
+      }
+      .textinput, .textInput, .form-control
+      {
+
+      }
+      }
+  </style>
+    <div class="heading" style="padding-left:200px;color:red;">
+        <h2>Uttar Pradesh Registrar Firms Societies and Chits</h2>
+    </div>
+<div class="frm" style="padding: 70px 50px 180px 300px; width:60%;">
+<h2>Login</h2>
+<form class="frm" method="post">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <button type="submit">Login</button>
+</form>
+</div>
+{% endblock content %}

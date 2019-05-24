@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.css" type="text/css" />
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="39acc41f-b6f5-4773-befd-3484fab5e1c3" data-root-id="2414"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="2503">
+          {"924e3ee9-2892-4e13-bf97-ff2f1df28608":{"roots":{"references":[{"attributes":{"formatter":{"id":"2443","type":"BasicTickFormatter"},"ticker":{"id":"2430","type":"BasicTicker"}},"id":"2429","type":"LinearAxis"},{"attributes":{"dimension":1,"ticker":{"id":"2430","type":"BasicTicker"}},"id":"2433","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"top"},"width":{"value":0.9},"x":{"field":"x"}},"id":"2437","type":"VBar"},{"attributes":{"source":{"id":"2435","type":"ColumnDataSource"}},"id":"2439","type":"CDSView"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto"},"id":"2434","type":"Toolbar"},{"attributes":{"fill_color":{"value":"#1f77b4"},"line_color":{"value":"#1f77b4"},"top":{"field":"top"},"width":{"value":0.9},"x":{"field":"x"}},"id":"2436","type":"VBar"},{"attributes":{"callback":null,"data":{"top":[25.0,23.0,25.0,10.0,24.0,61.0],"x":["Hardoi","Kheri","Lucknow","Rae Bareli","Sitapur","Unnao"]},"selected":{"id":"2446","type":"Selection"},"selection_policy":{"id":"2445","type":"UnionRenderers"}},"id":"2435","type":"ColumnDataSource"},{"attributes":{"formatter":{"id":"2441","type":"CategoricalTickFormatter"},"major_label_orientation":"vertical","ticker":{"id":"2426","type":"CategoricalTicker"}},"id":"2425","type":"CategoricalAxis"},{"attributes":{"data_source":{"id":"2435","type":"ColumnDataSource"},"glyph":{"id":"2436","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"2437","type":"VBar"},"selection_glyph":null,"view":{"id":"2439","type":"CDSView"}},"id":"2438","type":"GlyphRenderer"},{"attributes":{},"id":"2445","type":"UnionRenderers"},{"attributes":{},"id":"2423","type":"LinearScale"},{"attributes":{},"id":"2421","type":"CategoricalScale"},{"attributes":{"grid_line_color":{"value":null},"ticker":{"id":"2426","type":"CategoricalTicker"}},"id":"2428","type":"Grid"},{"attributes":{},"id":"2441","type":"CategoricalTickFormatter"},{"attributes":{"below":[{"id":"2425","type":"CategoricalAxis"}],"center":[{"id":"2428","type":"Grid"},{"id":"2433","type":"Grid"}],"left":[{"id":"2429","type":"LinearAxis"}],"plot_height":400,"renderers":[{"id":"2438","type":"GlyphRenderer"}],"title":{"id":"2415","type":"Title"},"toolbar":{"id":"2434","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"2417","type":"FactorRange"},"x_scale":{"id":"2421","type":"CategoricalScale"},"y_range":{"id":"2419","type":"DataRange1d"},"y_scale":{"id":"2423","type":"LinearScale"}},"id":"2414","subtype":"Figure","type":"Plot"},{"attributes":{"callback":null,"start":0},"id":"2419","type":"DataRange1d"},{"attributes":{},"id":"2430","type":"BasicTicker"},{"attributes":{},"id":"2426","type":"CategoricalTicker"},{"attributes":{},"id":"2443","type":"BasicTickFormatter"},{"attributes":{},"id":"2446","type":"Selection"},{"attributes":{"text":"Average Duration in Days"},"id":"2415","type":"Title"},{"attributes":{"callback":null,"factors":["Hardoi","Kheri","Lucknow","Rae Bareli","Sitapur","Unnao"]},"id":"2417","type":"FactorRange"}],"root_ids":["2414"]},"title":"Bokeh Application","version":"1.1.0"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('2503').textContent;
+                  var render_items = [{"docid":"924e3ee9-2892-4e13-bf97-ff2f1df28608","roots":{"2414":"39acc41f-b6f5-4773-befd-3484fab5e1c3"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

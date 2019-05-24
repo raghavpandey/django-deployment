@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#home-info div {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#home-info h1 {
+    font-size: 72px;
+}
+
+#home-info p {
+    font-size: 32px;
+}
+
+#home-info .table {
+    table-layout: fixed;
+    width: 1500px;
+}
+
+#graph-container .form-inline {
+    margin: 20px auto;
+}
+
+.pagination {
+    display: inline;
+}
+
+.pagination span {
+    font-size: 18px;
+    text-align: center;
+    align: center;
+}
+
+#graph-container img {
+    align: center;
+}

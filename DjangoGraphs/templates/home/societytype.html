@@ -1,0 +1,46 @@
+{% extends 'home/index.html' %}
+{% load static %}
+{% block content %}
+
+         <style>
+                .h2, h2 {
+                font-size: 2rem;
+                text-align: center;
+                }
+                #form-container{
+                padding-top:100px;
+                text-align:center;
+                }
+         </style>
+        <h1 class="h2">Division & District Registration Count </h1>
+<div style="width:100%">
+  <div style="width:50%; float:left;">
+      <div style="position: relative; display: block; left: 0px; top: 0px; width: 600px; height: 350px; margin: 0px;">
+          {% include 'home/pie2.html' %}
+          <hr>
+        </div>
+  </div>
+  <div style="width:50%; float:right;">
+      <div style="position: relative; display: block; left: 0px; top: 0px; width: 600px; height: 350px; margin: 0px;">
+        {% if flag %}
+        {% include 'home/barsoctype.html' %}
+          <hr>
+        {% else %} <h4 style="padding-top:200px; padding-left:100px;"> Select District Name for District Chart </h4>
+        {% endif %}
+        </div>
+  </div>
+    <div style="clear: both;">
+        <div id="form-container">
+    <form class="form-inline justify-content-center" action="{% url 'SocietyTypePageView' %}" method="POST">
+        {% csrf_token %}
+        <label class="mr-sm-2">Division Name:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="email" name="division_name">
+        <label class="mr-sm-2">District Name:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="email" name="dist_name">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>  </div>
+</div>
+
+
+{% endblock content %}
